@@ -1,0 +1,17 @@
+html {
+  background-image: url("./img/loginBackground.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+.formulario {
+  background-color: white;
+  width: 20rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 2rem;
+}
