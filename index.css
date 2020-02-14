@@ -8,7 +8,9 @@ html {
   background-repeat: no-repeat;
   display: flex;
   justify-content: center;
+  align-items: center;
   position: relative;
+  height: 90vh;
 }
 .formulario {
   background-color: white;
