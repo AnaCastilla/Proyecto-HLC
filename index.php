@@ -2,13 +2,15 @@
 <html lang="es" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Hind+Siliguri&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Exo+2&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="">
     <link rel="stylesheet" href="index.css">
     <title>Inicio de sesión</title>
   </head>
   <body>
     <form class="formulario"  action="index.php" method="post">
-      <h3>Liga de Baloncesto</h3>
+      <h3>LIGA DE BALONCESTO</h3>
       <div class="user">
         <label for="usuario">Usuario: </label>
         <input type="text" name="usuario">
