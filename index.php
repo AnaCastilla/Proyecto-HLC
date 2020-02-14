@@ -31,7 +31,7 @@
     $pass=$_POST['password'];
 
     if (($user == "" || $pass == "") || ($user != "admin" || $pass != "admin")) {
-      echo '<h1>Error en el usuario o la contraseña</h1>';
+      echo '<p>Error en el usuario o la contraseña<p>';
     } else if ($user == "admin" && $pass == "admin") {
       echo 'Iniciando sesión';
     }
