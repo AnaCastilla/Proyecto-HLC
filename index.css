@@ -12,6 +12,15 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 1rem;
+  padding: 1rem 1rem 2rem 1rem;
   border-radius: 2rem;
+  flex-direction: column;
+}
+.formulario div {
+  display: flex;
+  justify-content: space-between;
+  width: 14rem;
+}
+input {
+  width: 8rem;
 }

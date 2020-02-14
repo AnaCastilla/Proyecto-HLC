@@ -8,16 +8,18 @@
   </head>
   <body>
     <form class="formulario"  action="index.php" method="post">
-      <div class="divForm">
-        <h3>Liga de Baloncesto</h3>
-        <label for="usuario">Usuario: </label> <input type="text" name="usuario">
-      </br>
-      </br>
-        <label for="password">Contraseña: </label> <input type="password" name="password">
-      </br>
-      </br>
-        <button type="submit" name="enviar">Entrar</button>
+      <h3>Liga de Baloncesto</h3>
+      <div class="user">
+        <label for="usuario">Usuario: </label>
+        <input type="text" name="usuario">
       </div>
+      <br>
+      <div class="pass">
+        <label for="password">Contraseña: </label>
+        <input type="password" name="password">
+      </div>
+      </br>
+      <button type="submit" name="enviar">Entrar</button>
     </form>
   </body>
 </html>
