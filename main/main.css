@@ -1,0 +1,88 @@
+* {
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+}
+html {
+  background-image: url("../img/loginBackground.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.sideMenu {
+  height: 100vh;
+  width: 20rem;
+  background-color: rgba(0, 0, 0, 0.8);
+  margin-left: -350px;
+}
+.sideMenu:hover {
+  animation: slidein 1s; animation-fill-mode: forwards;
+}
+.topMenu {
+  width: 100vw;
+  height: 3rem;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+}
+.topMenu i {
+  font-size: 1.5rem;
+  margin-left: 1rem;
+  color: white;
+}
+.topMenu i:hover {
+  animation: colorChange 0.5s; animation-fill-mode: forwards;
+}
+@keyframes slidein {
+  from {
+    margin-left: -350px;
+  }
+
+  to {
+    margin-left: 0%;
+  }
+}
+@keyframes slideout {
+  from {
+    margin-left: 0%;
+  }
+
+  to {
+    margin-left: -350px;
+  }
+}
+@keyframes colorChange {
+  from {
+    color: white;
+  }
+
+  to {
+    color: #9C8A84;
+  }
+}
+@keyframes reverseColorChange {
+  from {
+    color: #9C8A84;
+  }
+
+  to {
+    color: white;
+  }
+}
+@keyframes rotateOpenMenu {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(-90deg);
+  }
+}
+@keyframes rotateCloseMenu {
+  from {
+    transform: rotate(-90deg);
+  }
+
+  to {
+    transform: rotate(0deg);
+  }
+}

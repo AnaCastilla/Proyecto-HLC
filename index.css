@@ -4,10 +4,11 @@
 }
 
 h3{
+  font-family: 'Exo 2', sans-serif;
+  text-align: center;
+  font-weight: bold;
   text-shadow: 2px 2px 4px white;
-
 }
-
 html {
   background-image: url("./img/loginBackground.jpg");
   background-size: 100%;
@@ -18,7 +19,6 @@ html {
   position: relative;
   height: 90vh;
 }
-
 .formulario {
   background-image: url("./img/formBackground.jpg");
   background-size: cover;
@@ -33,35 +33,26 @@ html {
   border-radius: 2rem;
   flex-direction: column;
   animation: bounceInDown 1.5s;
-
 }
-
 .formulario div {
   display: flex;
   justify-content: space-between;
   width: 14rem;
 }
-
 input {
   width: 8rem;
   border-radius: 2rem;
 }
-
-h3 {
-  font-family: 'Exo 2', sans-serif;
-  text-align: center;
-  font-weight: bold;
-}
-
 .error {
   animation: jackInTheBox 1s;
   color: red;
-  background-color: rgba(255, 255, 255, 0.2);
+  font-weight: bold;
+  background-color: rgba(255, 255, 255, 0.5);
   border-radius: 10px;
   border: 1px solid red;
   text-align: center;
+  text-shadow: 2px 2px 4px white;
 }
-
 button {
   background-color: #434748;
   border: 3px #6F98B6 outset;
@@ -75,7 +66,6 @@ button:hover {
   background-color: #6F98B6;
   border: 3px #434748 outset;
 }
-
 @keyframes jackInTheBox {
   from {
     opacity: 0;
