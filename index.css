@@ -1,5 +1,11 @@
 * {
   font-family: 'Hind Siliguri', sans-serif;
+  color: white;
+}
+
+h3{
+  text-shadow: 2px 2px 4px white;
+
 }
 
 html {
@@ -12,9 +18,14 @@ html {
   position: relative;
   height: 90vh;
 }
+
 .formulario {
-  background-color: white;
+  background-image: url("./img/formBackground.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   width: 20rem;
+  border: 3px #6F98B6 inset;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -22,14 +33,18 @@ html {
   border-radius: 2rem;
   flex-direction: column;
   animation: bounceInDown 1.5s;
+
 }
+
 .formulario div {
   display: flex;
   justify-content: space-between;
   width: 14rem;
 }
+
 input {
   width: 8rem;
+  border-radius: 2rem;
 }
 
 h3 {
@@ -41,8 +56,24 @@ h3 {
 .error {
   animation: jackInTheBox 1s;
   color: red;
-  font-size: 15px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  border: 1px solid red;
   text-align: center;
+}
+
+button {
+  background-color: #434748;
+  border: 3px #6F98B6 outset;
+  color: white;
+  padding: 0 1rem 0 1rem;
+  border-radius: 2rem;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: #6F98B6;
+  border: 3px #434748 outset;
 }
 
 @keyframes jackInTheBox {
