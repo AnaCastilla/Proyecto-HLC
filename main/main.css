@@ -32,6 +32,29 @@ html {
 .topMenu i:hover {
   animation: colorChange 0.5s; animation-fill-mode: forwards;
 }
+.sideMenu {
+  font-family: 'Hind Siliguri', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 2rem;
+}
+.sideMenu ul {
+  width: 100%;
+}
+.sideMenu li:hover {
+  background-color: rgba(50, 50, 50, 0.5);
+}
+.sideMenu a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  width: 100%;
+  height: 100%;
+  padding: 1rem 0 1rem 2rem;
+}
+
+/*ANIMACIONES*/
 @keyframes slidein {
   from {
     margin-left: -350px;
