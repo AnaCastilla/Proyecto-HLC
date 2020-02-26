@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="liga.css">
     <link href="https://fonts.googleapis.com/css?family=Hind+Siliguri&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/113416730f.js" crossorigin="anonymous"></script>
     <script>
@@ -47,7 +47,7 @@
         </ul>
       </div>
       <div class="content">
-        <h1>HOLA HOLA</h1>
+        <h1>LIGA</h1>
       </div>
     </div>
   </body>
