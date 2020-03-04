@@ -33,7 +33,7 @@
     if (($user == "" || $pass == "") || ($user != "admin" || $pass != "admin")) {
       echo '<p class="error">ERROR EN EL USUARIO O EN LA CONTRASEÑA<p>';
     } else if ($user == "admin" && $pass == "admin") {
-      echo 'Iniciando sesión';
+      header('Location: main/main.php');
     }
   }
 ?>

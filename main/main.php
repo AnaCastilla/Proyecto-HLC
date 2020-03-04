@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="main.css">
     <link href="https://fonts.googleapis.com/css?family=Hind+Siliguri&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/113416730f.js" crossorigin="anonymous"></script>
     <script>
       x = new Boolean(true);
@@ -44,10 +45,14 @@
           <li class="nav-item">
             <a class="nav-link" href="../resultados/resultados.php">Resultado</a>
           </li>
+          <li class="nav-item">
+            <a href="../index.php"><img src="../img/logout-icon.png" alt="Cerrar sesión"></a>
+          </li>
         </ul>
       </div>
       <div class="content">
-        <h1>HOLA HOLA</h1>
+        <h1>¡BIENVENID@!</h1>
+        <img class="gif" src="../img/ball-gif.gif">
       </div>
     </div>
   </body>

@@ -44,10 +44,29 @@
           <li class="nav-item">
             <a class="nav-link" href="../resultados/resultados.php">Resultado</a>
           </li>
+          <li class="nav-item">
+            <a href="../index.php"><img src="../img/logout-icon.png" alt="Cerrar sesión"></a>
+          </li>
         </ul>
       </div>
       <div class="content">
-        <h1>LIGA</h1>
+        <?php
+          require '../Medoo.php';
+          use Medoo\Medoo;
+
+          $database = new Medoo([
+              'database_type' => 'mysql',
+              'database_name' => 'bdliga',
+              'server' => 'localhost',
+              'username' => 'root',
+              'password' => ''
+          ]);
+
+          $numLigas=$database->select("liga","*");
+          if ($numLigas==0) {
+            echo '<h1>No existe ninguna liga</h1>';
+          }
+         ?>
       </div>
     </div>
   </body>
