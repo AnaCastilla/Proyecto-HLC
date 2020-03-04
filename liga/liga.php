@@ -62,9 +62,12 @@
               'password' => ''
           ]);
 
-          $numLigas=$database->select("liga","*");
-          if ($numLigas==0) {
-            echo '<h1>No existe ninguna liga</h1>';
+          $resultado=$database->select("liga","*");
+          $numFilas=count($resultado);
+          if ($numFilas==0) {
+            echo '<p class="noLiga">No existe ninguna liga<p>';
+            echo '<a href="crearLiga.php">Crear Liga</a>';
+          } else {
           }
          ?>
       </div>
