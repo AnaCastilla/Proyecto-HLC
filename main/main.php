@@ -45,10 +45,8 @@
           <li class="nav-item">
             <a class="nav-link" href="../resultados/resultados.php">Resultado</a>
           </li>
-          <li class="nav-item">
-            <a href="../index.php"><img src="../img/logout-icon.png" alt="Cerrar sesión"></a>
-          </li>
         </ul>
+        <a href="../index.php" class="logOut"><img src="../img/logout-icon.png" alt="Cerrar sesión"></a>
       </div>
       <div class="content">
         <h1>¡BIENVENID@!</h1>

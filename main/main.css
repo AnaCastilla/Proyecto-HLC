@@ -10,13 +10,6 @@ html {
   background-repeat: no-repeat;
   position: relative;
 }
-
-img {
-  padding-top: 260px;
-  width: 25px;
-  height: 25px;
-}
-
 .body {
   display: flex;
 }
@@ -25,6 +18,7 @@ img {
   height: 100vh;
   width: 20rem;
   background-color: rgba(0, 0, 0, 0.8);
+  overflow: hidden;
 }
 .sideMenu:hover {
   animation: slidein 1s; animation-fill-mode: forwards;
@@ -49,6 +43,7 @@ img {
   align-items: center;
   font-size: 2rem;
   margin-left: -318px;
+  position: relative;
 }
 .sideMenu ul {
   width: 100%;
@@ -56,7 +51,7 @@ img {
 .sideMenu li:hover {
   background-color: rgba(50, 50, 50, 0.5);
 }
-.sideMenu a {
+.sideMenu ul li a {
   display: block;
   color: white;
   text-decoration: none;
@@ -64,11 +59,9 @@ img {
   height: 100%;
   padding: 1rem 0 1rem 2rem;
 }
-
 h1 {
     font-family: 'Permanent Marker', sans-serif;
 }
-
 .content {
   display: flex;
   flex-direction: column;
@@ -78,12 +71,25 @@ h1 {
   font-size: 30px;
   color: #9ABDDD;
 }
-
 .gif {
   width: 100px;
   height: 100px;
 }
-
+.logOut {
+  filter: invert(0.4) sepia(1);
+  position: absolute;
+  left: 100px;
+  top: 320px;
+  transform: rotate(180deg);
+}
+.logOut img {
+  width: 25px;
+  height: 25px;
+  display: block;
+}
+.logOut:hover {
+  filter: invert(0.6);
+}
 /*ANIMACIONES*/
 @keyframes slidein {
   from {
