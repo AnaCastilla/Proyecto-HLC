@@ -1,0 +1,66 @@
+* {
+  overflow-x: hidden;
+  padding: 0;
+  margin: 0;
+  font-family: 'Hind Siliguri', sans-serif;
+}
+html {
+  background-image: url("../img/loginBackground.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+body {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+}
+.topMenu {
+  position: absolute;
+  top: 0px;
+  width: 100vw;
+  height: 3rem;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  border-radius: 30px;
+  width: 18rem;
+  background-image: url("../img/formBackground.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+form label {
+  color: white;
+}
+.buttons {
+  text-align: center;
+}
+.buttons a {
+  text-decoration: none
+}
+.buttons a, .buttons input {
+  background-color: #434748;
+  border: 3px #6F98B6 outset;
+  color: white;
+  padding: 0.2rem 1rem 0.2rem 1rem;
+  border-radius: 2rem;
+  font-size: 1rem;
+}
+.buttons a:hover, .buttons input:hover {
+  background-color: #6F98B6;
+  border: 3px #434748 outset;
+}
+.row {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}

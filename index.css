@@ -1,7 +1,6 @@
 * {
   font-family: 'Hind Siliguri', sans-serif;
 }
-
 h3{
   font-family: 'Exo 2', sans-serif;
   text-align: center;
@@ -65,7 +64,6 @@ button {
   border-radius: 2rem;
   font-weight: bold;
 }
-
 button:hover {
   background-color: #6F98B6;
   border: 3px #434748 outset;

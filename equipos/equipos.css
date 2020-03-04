@@ -17,6 +17,13 @@ html {
   height: 100vh;
   width: 20rem;
   background-color: rgba(0, 0, 0, 0.8);
+  font-family: 'Hind Siliguri', sans-serif;
+  flex-direction: column;
+  align-items: center;
+  font-size: 2rem;
+  margin-left: -318px;
+  position: relative;
+  overflow: hidden;
 }
 .sideMenu:hover {
   animation: slidein 1s; animation-fill-mode: forwards;
@@ -35,20 +42,13 @@ html {
   margin-left: 1rem;
   color: white;
 }
-.sideMenu {
-  font-family: 'Hind Siliguri', sans-serif;
-  flex-direction: column;
-  align-items: center;
-  font-size: 2rem;
-  margin-left: -318px;
-}
 .sideMenu ul {
   width: 100%;
 }
 .sideMenu li:hover {
   background-color: rgba(50, 50, 50, 0.5);
 }
-.sideMenu a {
+.sideMenu ul li a {
   display: block;
   color: white;
   text-decoration: none;
@@ -64,7 +64,33 @@ html {
   width: 100%;
   align-items: center;
 }
-
+.logOut {
+  filter: invert(0.4) sepia(1);
+  position: absolute;
+  left: 100px;
+  top: 320px;
+  transform: rotate(180deg);
+}
+.logOut img {
+  width: 25px;
+  height: 25px;
+  display: block;
+}
+.logOut:hover {
+  filter: invert(0.6);
+}
+.addButton {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin: 2em;
+  width: 5rem;
+  filter: grayscale(1);
+}
+.addButton img {
+  display: block;
+  max-width: 100%;
+}
 /*ANIMACIONES*/
 @keyframes slidein {
   from {

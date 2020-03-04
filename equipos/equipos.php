@@ -45,9 +45,29 @@
             <a class="nav-link" href="../resultados/resultados.php">Resultado</a>
           </li>
         </ul>
+        <a href="../index.php" class="logOut"><img src="../img/logout-icon.png" alt="Cerrar sesión"></a>
       </div>
       <div class="content">
         <h1>EQUIPOS</h1>
+        <?php
+          require '../Medoo.php';
+          use Medoo\Medoo;
+
+          $database = new Medoo([
+              'database_type' => 'mysql',
+              'database_name' => 'bdliga',
+              'server' => 'localhost',
+              'username' => 'root',
+              'password' => ''
+          ]);
+
+          $resultado = $database->select("liga","*");
+          $numFilas = count($resultado);
+          if ($numFilas == 0) {
+            echo '<h1>No existen equipos aun</h1>';
+          }
+         ?>
+         <a href="./addEquipo.php" class="addButton"><img src="../img/add-icon.png" alt="Añadir Equipo" class="img-rounded center-block"></a>
       </div>
     </div>
   </body>
