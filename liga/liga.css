@@ -2,8 +2,8 @@
   overflow-x: hidden;
   padding: 0;
   margin: 0;
-
 }
+
 html {
   background-image: url("../img/loginBackground.jpg");
   background-size: cover;
@@ -11,14 +11,17 @@ html {
   position: relative;
   font-family: 'Hind Siliguri', sans-serif;
 }
+
 .body {
   display: flex;
 }
 
 .titulo {
   font-family: 'Permanent Marker', sans-serif;
-  color: #4F85B7;
-  font-size: 50px;
+  letter-spacing: 0.5rem;
+  text-shadow: 0 -1px 0 #fff, 0 1px 0 #2e2e2e, 0 2px 0 #2c2c2c, 0 3px 0 #2a2a2a, 0 4px 0 #282828, 0 5px 0 #262626, 0 6px 0 #242424, 0 7px 0 #222, 0 8px 0 #202020;
+  font-size: 3rem;
+  margin-bottom: 7rem;
 }
 
 .editButton img {
@@ -26,18 +29,25 @@ html {
   width: 10%;
   height: 10%;
 }
-
+.aHome {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+.home:hover {
+  color: #9C8A84;
+}
 .fondo_res {
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.8);
   font-weight: bold;
   color: #4F85B7;
-
 }
-
-td,tr{
+td, th {
   padding: 5px;
+  color: black;
+  border-radius: 5px;
 }
-
 .sideMenu {
   display: inline-block;
   height: 100vh;

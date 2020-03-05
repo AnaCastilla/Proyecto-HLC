@@ -32,6 +32,7 @@
   <body>
     <div class="topMenu">
       <i id="menu" class="fas fa-bars" onclick="doOnMenu()"></i>
+      <a href="../main/main.php" class="aHome"><i class="fas fa-home home"></i></a>
     </div>
     <div class="body">
       <div id="sidebar" class="sideMenu">
