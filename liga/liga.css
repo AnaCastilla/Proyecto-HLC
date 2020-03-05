@@ -2,29 +2,54 @@
   overflow-x: hidden;
   padding: 0;
   margin: 0;
-  font-family: 'Hind Siliguri', sans-serif;
+
 }
 html {
   background-image: url("../img/loginBackground.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
+  font-family: 'Hind Siliguri', sans-serif;
 }
-
-img {
-  padding-top: 260px;
-  width: 25px;
-  height: 25px;
-}
-
 .body {
   display: flex;
 }
+
+.titulo {
+  font-family: 'Permanent Marker', sans-serif;
+  color: #4F85B7;
+  font-size: 50px;
+}
+
+.editButton img {
+  display: block;
+  width: 10%;
+  height: 10%;
+}
+
+.fondo_res {
+  background-color: rgba(255, 255, 255, 0.5);
+  font-weight: bold;
+  color: #4F85B7;
+
+}
+
+td,tr{
+  padding: 5px;
+}
+
 .sideMenu {
   display: inline-block;
   height: 100vh;
   width: 20rem;
   background-color: rgba(0, 0, 0, 0.8);
+  font-family: 'Hind Siliguri', sans-serif;
+  flex-direction: column;
+  align-items: center;
+  font-size: 2rem;
+  margin-left: -318px;
+  position: relative;
+  overflow: hidden;
 }
 .sideMenu:hover {
   animation: slidein 1s; animation-fill-mode: forwards;
@@ -43,20 +68,13 @@ img {
   margin-left: 1rem;
   color: white;
 }
-.sideMenu {
-  font-family: 'Hind Siliguri', sans-serif;
-  flex-direction: column;
-  align-items: center;
-  font-size: 2rem;
-  margin-left: -318px;
-}
 .sideMenu ul {
   width: 100%;
 }
 .sideMenu li:hover {
   background-color: rgba(50, 50, 50, 0.5);
 }
-.sideMenu a {
+.sideMenu ul li a {
   display: block;
   color: white;
   text-decoration: none;
@@ -71,6 +89,45 @@ img {
   padding: 2rem;
   width: 100%;
   align-items: center;
+}
+.logOut {
+  filter: invert(0.4) sepia(1);
+  position: absolute;
+  left: 30px;
+  top: 520px;
+  transform: rotate(180deg);
+}
+.logOut img {
+  width: 25px;
+  height: 25px;
+  display: block;
+}
+.logOut:hover {
+  filter: invert(0.6);
+}
+.addButton {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin: 2em;
+  width: 5rem;
+  filter: grayscale(1);
+}
+.addButton img {
+  display: block;
+  max-width: 100%;
+}
+
+.error {
+  font-weight: bold;
+  color: #9ABDDD;
+  font-size: 40px;
+  padding: 10px;
+}
+
+.mensaje {
+  font-weight: bold;
+  color: #9ABDDD;
 }
 
 /*ANIMACIONES*/

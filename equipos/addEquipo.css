@@ -64,3 +64,14 @@ form label {
   justify-content: space-between;
   width: 100%;
 }
+
+.error {
+  margin-top: 10px;
+  color: red;
+  font-weight: bold;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+  border: 1px solid red;
+  text-align: center;
+  text-shadow: 2px 2px 4px white;
+}

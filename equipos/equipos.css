@@ -2,16 +2,42 @@
   overflow-x: hidden;
   padding: 0;
   margin: 0;
+
 }
 html {
   background-image: url("../img/loginBackground.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
+  font-family: 'Hind Siliguri', sans-serif;
 }
 .body {
   display: flex;
 }
+
+.titulo {
+  font-family: 'Permanent Marker', sans-serif;
+  color: #4F85B7;
+  font-size: 50px;
+}
+
+.editButton img {
+  display: block;
+  width: 10%;
+  height: 10%;
+}
+
+.fondo_res {
+  background-color: rgba(255, 255, 255, 0.5);
+  font-weight: bold;
+  color: #4F85B7;
+
+}
+
+td,tr{
+  padding: 5px;
+}
+
 .sideMenu {
   display: inline-block;
   height: 100vh;
@@ -67,8 +93,8 @@ html {
 .logOut {
   filter: invert(0.4) sepia(1);
   position: absolute;
-  left: 100px;
-  top: 320px;
+  left: 30px;
+  top: 520px;
   transform: rotate(180deg);
 }
 .logOut img {
@@ -91,6 +117,19 @@ html {
   display: block;
   max-width: 100%;
 }
+
+.error {
+  font-weight: bold;
+  color: #9ABDDD;
+  font-size: 40px;
+  padding: 10px;
+}
+
+.mensaje {
+  font-weight: bold;
+  color: #9ABDDD;
+}
+
 /*ANIMACIONES*/
 @keyframes slidein {
   from {

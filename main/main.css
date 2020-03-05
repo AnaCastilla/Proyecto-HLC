@@ -60,7 +60,8 @@ html {
   padding: 1rem 0 1rem 2rem;
 }
 h1 {
-    font-family: 'Permanent Marker', sans-serif;
+  font-family: 'Permanent Marker', sans-serif;
+  color: #4F85B7;
 }
 .content {
   display: flex;
@@ -78,8 +79,8 @@ h1 {
 .logOut {
   filter: invert(0.4) sepia(1);
   position: absolute;
-  left: 100px;
-  top: 320px;
+  left: 30px;
+  top: 520px;
   transform: rotate(180deg);
 }
 .logOut img {

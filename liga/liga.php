@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="liga.css">
     <link href="https://fonts.googleapis.com/css?family=Hind+Siliguri&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/113416730f.js" crossorigin="anonymous"></script>
     <script>
       x = new Boolean(true);
@@ -44,10 +45,8 @@
           <li class="nav-item">
             <a class="nav-link" href="../resultados/resultados.php">Resultado</a>
           </li>
-          <li class="nav-item">
-            <a href="../index.php"><img src="../img/logout-icon.png" alt="Cerrar sesión"></a>
-          </li>
         </ul>
+        <a href="../index.php" class="logOut"><img src="../img/logout-icon.png" alt="Cerrar sesión"></a>
       </div>
       <div class="content">
         <?php
@@ -65,11 +64,37 @@
           $resultado=$database->select("liga","*");
           $numFilas=count($resultado);
           if ($numFilas==0) {
-            echo '<p class="noLiga">No existe ninguna liga<p>';
-            echo '<a href="crearLiga.php">Crear Liga</a>';
+            echo '<p class="error">No existe ninguna liga<p>';
+            echo '<p class="mensaje">Para crear una liga, pincha en el icono de abajo a la derecha</p>';
+            echo '<a href="./addLiga.php" class="addButton"><img src="../img/add-icon.png" alt="Añadir Equipo" class="img-rounded center-block"></a>';
           } else {
+            $nom=$database->select("liga","nombre_liga");
+            $desc=$database->select("liga","desc_liga");
+            $año=$database->select("liga","año_liga");
+            echo "<center><h2 class='titulo'><b>LIGAS</b></h2></center>";
+            echo "<center>";
+            echo "<table width='700' border='0'>";
+            echo "<tr bordercolor='#4F85B7' bgcolor='#4F85B7'>";
+            echo "<td align='center'><b>Nombre</b></td>";
+            echo "<td align='center'><b>Descripción</b></td>";
+            echo "<td align='center'><b>Año de creación</b></td></tr>";
+
+
+
+            echo "<tr class='fondo_res'>";
+            echo "<td align='center'>",implode($nom),"</td>";
+            echo "<td align='center'>",implode($desc),"</td>";
+            echo "<td align='center'>",implode($año),"</td>";
+            echo "<td align='center'><a href='editLiga.php'>Edit</a></td>";
+            echo "<td align='center'><a href='editLiga.php'>Borrar</a></td>";
+            echo "</tr>";
+
+
+            echo "</table></center>";
           }
          ?>
+
+      </div>
       </div>
     </div>
   </body>
