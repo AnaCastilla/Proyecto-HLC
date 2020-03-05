@@ -24,7 +24,7 @@
         <br>
         <div class="row">
           <label for="yearLig">Año de creación:</label>
-          <input type="text" name="yearLig" value="" min="1900" max="2020">
+          <input type="number" name="yearLig" value="" min="1900" max="2020">
         </div>
         <br>
         <div class="buttons">

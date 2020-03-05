@@ -49,14 +49,9 @@
         <a href="../index.php" class="logOut"><img src="../img/logout-icon.png" alt="Cerrar sesión"></a>
       </div>
       <div class="content">
-        <h1>¡BIENVENID@!</h1>
+        <h1 class="titulo">¡BIENVENID@!</h1>
         <img class="gif" src="../img/ball-gif.gif">
       </div>
     </div>
   </body>
 </html>
-<?php
-
-
-
-?>

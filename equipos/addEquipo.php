@@ -12,10 +12,6 @@
     </div>
     <form action="addEquipo.php" method="post">
       <div class="">
-        <div class="row">
-          <label for="codEq">Código del equipo:</label>
-          <input type="text" name="codEq" value="">
-        </div>
         <br>
         <div class="row">
           <label for="nombEq">Nombre de equipo:</label>
@@ -54,15 +50,17 @@ $database = new Medoo([
 ]);
 
 if(isset($_POST['submit'])) {
-  $cod=$_POST['codEq'];
   $nom=$_POST['nombEq'];
   $city=$_POST['cityEq'];
   $creacion=$_POST['yearEq'];
 
-  if (empty($cod) or empty($nom) or empty($city) or empty($creacion)) {
+  $query = $database->select("equipo","*");
+  $numFilas = count($query);
+
+  if (empty($nom) or empty($city) or empty($creacion)) {
     echo '<p class="error">Error, todos los campos tienen que estar rellenos para crear el equipo</p>';
   } else {
-    $resultado = $database->insert("equipo", ["cod_eq" => $cod,
+    $resultado = $database->insert("equipo", ["cod_eq" => $numFilas+1,
                                             "nombre_eq" => $nom,
                                             "ciudad_eq" => $city,
                                             "año_eq" => $creacion,

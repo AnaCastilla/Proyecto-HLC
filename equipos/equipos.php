@@ -65,8 +65,8 @@
           $resultado = $database->select("equipo","*");
           $numFilas = count($resultado);
           if ($numFilas == 0) {
-            echo '<p class="error">No existe ningún equipo<p>';
-            echo '<p class="mensaje">Para crear un equipo, pincha en el icono de abajo a la derecha</p>';
+            echo '<h2 class="zeroMensaje">No existe ningun equipo<h2>';
+            echo '<h3 class="zeroMensaje">Para crearlo, pincha en el icono de abajo a la derecha</h3>';
           } else {
             $cod=$database->select("equipo","cod_eq");
             $nom=$database->select("equipo","nombre_eq");
@@ -76,22 +76,19 @@
             echo "<center>";
             echo "<table width='700' border='0'>";
             echo "<tr bordercolor='#4F85B7' bgcolor='#4F85B7'>";
-            echo "<td align='center'><b>Código</b></td>";
-            echo "<td align='center'><b>Nombre</b></td>";
-            echo "<td align='center'><b>Ciudad</b></td>";
-            echo "<td align='center'><b>Año de creación</b></td></tr>";
+            echo "<th align='center'><b>Código</b></td>";
+            echo "<th align='center'><b>Nombre</b></td>";
+            echo "<th align='center'><b>Ciudad</b></td>";
+            echo "<th align='center'><b>Año de creación</b></td></tr>";
 
-
-
-            echo "<tr class='fondo_res'>";
-            echo "<td align='center'>",implode($cod),"</td>";
-            echo "<td align='center'>",implode($nom),"</td>";
-            echo "<td align='center'>",implode($city),"</td>";
-            echo "<td align='center'>",implode($año),"</td>";
-            echo "<td align='center'><a href='editEquipo.php'>Edit</a></td>";
-            echo "<td align='center'><a href='editEquipo.php'>Borrar</a></td>";
-            echo "</tr>";
-
+            foreach($resultado as $data) {
+              echo "<tr class='fondo_res'>";
+              echo "<td align='center'>", $data["cod_eq"],"</td>";
+              echo "<td align='center'>", $data["nombre_eq"],"</td>";
+              echo "<td align='center'>", $data["ciudad_eq"],"</td>";
+              echo "<td align='center'>", $data["año_eq"],"</td>";
+              echo "</tr>";
+            }
 
             echo "</table></center>";
           }

@@ -66,8 +66,8 @@
           $numFilas = count($resultado);
 
           if ($numFilas==0) {
-            echo '<p class="error">No existe ninguna liga<p>';
-            echo '<p class="mensaje">Para crear una liga, pincha en el icono de abajo a la derecha</p>';
+            echo '<h2 class="zeroMensaje">No existe ninguna liga<h2>';
+            echo '<h3 class="zeroMensaje">Para crearla, pincha en el icono de abajo a la derecha</h3>';
             echo '<a href="./addLiga.php" class="addButton"><img src="../img/add-icon.png" alt="Añadir Equipo" class="img-rounded center-block"></a>';
           } else {
             $nom = $database->select("liga","nombre_liga");
@@ -85,7 +85,9 @@
             echo "<tr class='fondo_res'>";
             echo "<td align='center'>",implode($nom),"</td>";
             echo "<td align='center'>",implode($desc),"</td>";
-            echo "<td align='center'>",implode($año),"</td>";
+            foreach($resultado as $data) {
+              echo "<td align='center'>",$data["año_liga"],"</td>";
+            }
             echo "</tr>";
 
             echo "</table></center>";
