@@ -10,36 +10,57 @@
     <div class="topMenu">
       <i id="menu" class="fas fa-bars" onclick="doOnMenu()" nav-linkdisabled></i>
     </div>
-    <form action="editLiga.php" method="post">
-      <div class="">
-        <div class="row">
-          <label for="nombLig">Nombre de la liga:</label>
-          <input type="text" name="nombLig" value="">
-        </div>
-        <br>
-        <div class="row">
-          <label for="descripLiga">Descripción:</label>
-          <textarea type="text" name="descripLiga" value="" colums=10></textarea>
-        </div>
-        <br>
-        <div class="row">
-          <label for="yearLig">Año de creación:</label>
-          <input type="number" name="yearLig" value="" min="1900" max="2020">
-        </div>
-        <br>
-        <div class="buttons">
-          <input type="submit" name="submit" class="btn" value="Editar">
-          <a href="./liga.php">Volver</a>
-        </div>
-      </div>
-    </form>
+    <?php
+    require '../Medoo.php';
+    use Medoo\Medoo;
+
+    $database = new Medoo([
+        'database_type' => 'mysql',
+        'database_name' => 'bdliga',
+        'server' => 'localhost',
+        'username' => 'root',
+        'password' => ''
+    ]);
+
+    $resultado = $database->select("liga","*");
+    $numFilas = count($resultado);
+
+    foreach($resultado as $data) {
+      $liga = $data["nombre_liga"];
+      $desc = $data["desc_liga"];
+      $año = $data["año_liga"];
+
+    }
+
+    echo "<form action='editLiga.php' method='post'>";
+    echo "  <div class=''>";
+    echo "    <div class='row'>";
+    echo "      <label for='nombLig'>Nombre de la liga:</label>";
+    echo "      <input type='text' name='nombLig' value='${liga}'>";
+    echo "    </div>";
+    echo "    <br>";
+    echo "    <div class='row'>";
+    echo "      <label for='descripLiga'>Descripción:</label>";
+    echo "      <textarea type='text' name='descripLiga' colums=10>${desc}</textarea>";
+    echo "    </div>";
+    echo "    <br>";
+    echo "    <div class='row'>";
+    echo "      <label for='yearLig'>Año de creación:</label>";
+    echo "      <input type='number' name='yearLig' min='1900' max='2020' value='${año}'>";
+    echo "    </div>";
+    echo "    <br>";
+    echo "    <div class='buttons'>";
+    echo "      <input type='submit' name='submit' class='btn' value='Editar'>";
+    echo "      <a href='./liga.php'>Volver</a>";
+    echo "    </div>";
+    echo "  </div>";
+    echo "</form>";
+
+    ?>
   </body>
 </html>
 
 <?php
- require '../Medoo.php';
- use Medoo\Medoo;
-
  $database = new Medoo([
      'database_type' => 'mysql',
      'database_name' => 'bdliga',

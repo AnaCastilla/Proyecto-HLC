@@ -69,6 +69,7 @@
             echo '<h2 class="zeroMensaje">No existe ninguna liga<h2>';
             echo '<h3 class="zeroMensaje">Para crearla, pincha en el icono de abajo a la derecha</h3>';
             echo '<a href="./addLiga.php" class="addButton"><img src="../img/add-icon.png" alt="Añadir Equipo" class="img-rounded center-block"></a>';
+
           } else {
             $nom = $database->select("liga","nombre_liga");
             $desc = $database->select("liga","desc_liga");
@@ -91,6 +92,11 @@
             echo "</tr>";
 
             echo "</table></center>";
+
+            echo "<div class='utils'>";
+            echo "  <a href='./editLiga.php'><img src='../img/edit.png' alt='editar' class='img-rounded center-block edit'></a>";
+            echo "  <a href='./editLiga.php'><img src='../img/delete.png' alt='eliminar' class='img-rounded center-block'></a>";
+            echo "</div>";
           }
          ?>
       </div>
