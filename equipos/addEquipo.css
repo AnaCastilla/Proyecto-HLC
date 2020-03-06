@@ -47,7 +47,7 @@ form label {
 .buttons a {
   text-decoration: none
 }
-.buttons a, .buttons input {
+.buttons a, .buttons input, .save {
   background-color: #434748;
   border: 3px #6F98B6 outset;
   color: white;
@@ -55,7 +55,10 @@ form label {
   border-radius: 2rem;
   font-size: 1rem;
 }
-.buttons a:hover, .buttons input:hover {
+.save {
+  width: 5rem;
+}
+.buttons a:hover, .buttons input:hover, .save:hover {
   background-color: #6F98B6;
   border: 3px #434748 outset;
 }
@@ -73,4 +76,10 @@ form label {
   border: 1px solid red;
   text-align: center;
   text-shadow: 2px 2px 4px white;
+  padding: 1rem;
+}
+h1 {
+  text-shadow: 0 -1px 0 #fff, 0 1px 0 #2e2e2e, 0 2px 0 #2c2c2c, 0 3px 0 #2a2a2a, 0 4px 0 #282828, 0 5px 0 #262626, 0 6px 0 #242424, 0 7px 0 #222, 0 8px 0 #202020;
+  font-size: 3rem;
+  padding: 1srem;
 }

@@ -95,7 +95,7 @@
 
             echo "<div class='utils'>";
             echo "  <a href='./editLiga.php'><img src='../img/edit.png' alt='editar' class='img-rounded center-block edit'></a>";
-            echo "  <a href='./editLiga.php'><img src='../img/delete.png' alt='eliminar' class='img-rounded center-block'></a>";
+            echo "  <a href='./delLiga.php'><img src='../img/delete.png' alt='eliminar' class='img-rounded center-block'></a>";
             echo "</div>";
           }
          ?>

@@ -82,8 +82,6 @@
                                             ["año_liga" => $creacion]);
       header("Location: liga.php");
    }
-
-
  }
 
  ?>

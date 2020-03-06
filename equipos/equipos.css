@@ -142,10 +142,23 @@ th {
   font-size: 40px;
   padding: 10px;
 }
-
 .mensaje {
   font-weight: bold;
   color: #9ABDDD;
+}
+.utils {
+  padding: 1rem;
+}
+.utils img {
+  display: block;
+  max-width: 100%;
+}
+.utils a {
+  margin: 2rem;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 4rem;
 }
 
 /*ANIMACIONES*/

@@ -91,6 +91,11 @@
             }
 
             echo "</table></center>";
+
+            echo "<div class='utils'>";
+            echo "  <a href='./editEquipo.php'><img src='../img/edit.png' alt='editar' class='img-rounded center-block edit'></a>";
+            echo "  <a href='./editLiga.php'><img src='../img/delete.png' alt='eliminar' class='img-rounded center-block'></a>";
+            echo "</div>";
           }
          ?>
          <a href="./addEquipo.php" class="addButton"><img src="../img/add-icon.png" alt="Añadir Equipo" class="img-rounded center-block"></a>
