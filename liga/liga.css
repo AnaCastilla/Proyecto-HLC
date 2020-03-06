@@ -135,16 +135,7 @@ th {
   display: block;
   max-width: 100%;
 }
-.error {
-  font-weight: bold;
-  color: #9ABDDD;
-  font-size: 40px;
-  padding: 10px;
-}
-.mensaje {
-  font-weight: bold;
-  color: #9ABDDD;
-}
+
 .utils {
   padding: 1rem;
 }

@@ -65,8 +65,8 @@
           $resultado = $database->select("resultado","*");
           $numFilas = count($resultado);
           if ($numFilas == 0) {
-            echo '<p class="error">No existe ningún resultado<p>';
-            echo '<p class="mensaje">Para crear un resultado, pincha en el icono de abajo a la derecha</p>';
+            echo '<h2 class="zeroMensaje">No existe ningún resultado<h2>';
+            echo '<h3 class="zeroMensaje">Para crearlo, pincha en el icono de abajo a la derecha</h3>';
           } else {
             $cod1=$database->select("jorn_resul","cod_eq1");
             $cod2=$database->select("jorn_resul","cod_eq2");

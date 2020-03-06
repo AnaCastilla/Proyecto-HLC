@@ -34,7 +34,7 @@
         <br>
         <div class="row">
           <label for="jornada">Jornada:</label>
-          <input type="date" name="jornada" value="">
+          <input type="number" name="jornada" min="1" max="31">
         </div>
         <br>
         <div class="buttons">
@@ -69,7 +69,7 @@
    if (empty($cod1) or empty($cod2) or empty($pts1) or empty($pts2) or empty($jorn)) {
      echo '<p class="error">Error, todos los campos tienen que estar rellenos para crear el resultado</p>';
    } else {
-     $existe1=$database->select("equipo","*",["cod_eq[=]" => $cod1]);
+    /* $existe1=$database->select("equipo","*",["cod_eq[=]" => $cod1]);
      $existe2=$database->select("equipo","*",["cod_eq[=]" => $cod2]);
 
      if ($cod1==$cod2) {
@@ -80,7 +80,7 @@
       echo '<p class="error">No existe el equipo 1</p>';
     } elseif (count($existe1)==0 and count($existe2)==0) {
       echo '<p class="error">No existen ninguno de los dos equipos introducidos</p>';
-    } else {
+    } else {*/
       $resultado = $database->insert("jorn_resul", ["cod_eq1" => $cod1,
                                               "cod_eq2" => $cod2,
                                               "puntos_eq1" => $pts1,
@@ -89,7 +89,7 @@
        header("Location: resultados.php");
     }
 
-   }
+//  }
 
 
  }
