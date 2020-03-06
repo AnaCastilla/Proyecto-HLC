@@ -78,24 +78,21 @@
             echo "<center>";
             echo "<table width='700' border='0'>";
             echo "<tr bordercolor='#4F85B7' bgcolor='#4F85B7'>";
-            echo "<td align='center'><b>Equipo 1</b></td>";
-            echo "<td align='center'><b>Equipo 2</b></td>";
-            echo "<td align='center'><b>Puntos Equipo 1</b></td>";
-            echo "<td align='center'><b>Puntos Equipo 2</b></td>";
-            echo "<td align='center'><b>Jornada</b></td></tr>";
+            echo "<th align='center'>Equipo 1</th>";
+            echo "<th align='center'>Puntos Equipo 1</th>";
+            echo "<th align='center'>VS</th>";
+            echo "<th align='center'>Puntos Equipo 2</th>";
+            echo "<th align='center'>Equipo 2</th>";
 
-
-
-            echo "<tr class='fondo_res'>";
-            echo "<td align='center'>",implode($cod1),"</td>";
-            echo "<td align='center'>",implode($cod2),"</td>";
-            echo "<td align='center'>",implode($pts1),"</td>";
-            echo "<td align='center'>",implode($pts2),"</td>";
-            echo "<td align='center'>",implode($jorn),"</td>";
-            echo "<td align='center'><a href='editResultados.php'>Edit</a></td>";
-            echo "<td align='center'><a href='editResultados.php'>Borrar</a></td>";
-            echo "</tr>";
-
+            foreach($resultado as $data) {
+              echo "<tr class='fondo_res'>";
+              echo "<td align='center'>", $data["cod_eq1"],"</td>";
+              echo "<td align='center'>", $data["puntos_eq1"],"</td>";
+              echo "<td align='center'>","VS","</td>";
+              echo "<td align='center'>", $data["puntos_eq2"],"</td>";
+              echo "<td align='center'>", $data["cod_eq2"],"</td>";
+              echo "</tr>";
+            }
 
             echo "</table></center>";
           }
