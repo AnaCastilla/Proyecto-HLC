@@ -91,14 +91,9 @@
             }
 
             echo "</table></center>";
-
             echo "<div class='utils'>";
             echo "  <a href='./editEquipo.php'><img src='../img/edit.png' alt='editar' class='img-rounded center-block edit'></a>";
-<<<<<<< Updated upstream
             echo "  <a href='./delEquipo.php'><img src='../img/delete.png' alt='eliminar' class='img-rounded center-block'></a>";
-=======
-            echo "  <a href='./editEquipo.php'><img src='../img/delete.png' alt='eliminar' class='img-rounded center-block'></a>";
->>>>>>> Stashed changes
             echo "</div>";
           }
          ?>
