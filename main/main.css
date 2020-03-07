@@ -31,11 +31,13 @@ html {
   background-color: rgba(0, 0, 0, 0.8);
   display: flex;
   align-items: center;
+  
 }
 .topMenu i {
   font-size: 1.5rem;
   margin-left: 1rem;
   color: white;
+
 }
 .sideMenu {
   font-family: 'Hind Siliguri', sans-serif;
@@ -93,6 +95,33 @@ html {
 }
 .logOut:hover {
   filter: invert(0.6);
+}
+.information {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 1rem;
+  border-radius: 10px;
+}
+.liga {
+  width: 40%;
+  float: left;
+  margin: 1rem;
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+.liga2 {
+  margin: 1rem;
+  width: 40%;
+  float: right;
+}
+.liga3 {
+  margin: 1rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 /*ANIMACIONES*/
 @keyframes slidein {
