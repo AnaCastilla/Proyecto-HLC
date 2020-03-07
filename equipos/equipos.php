@@ -68,10 +68,6 @@
             echo '<h2 class="zeroMensaje">No existe ningún equipo<h2>';
             echo '<h3 class="zeroMensaje">Para crearlo, pincha en el icono de abajo a la derecha</h3>';
           } else {
-            $cod=$database->select("equipo","cod_eq");
-            $nom=$database->select("equipo","nombre_eq");
-            $city=$database->select("equipo","ciudad_eq");
-            $año=$database->select("equipo","año_eq");
             echo "<center><h2 class='titulo'><b>EQUIPOS</b></h2></center>";
             echo "<center>";
             echo "<table width='700' border='0'>";

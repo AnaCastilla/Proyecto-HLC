@@ -51,6 +51,9 @@
       </div>
       <div class="content">
         <?php
+
+          $conexion = mysqli_connect("localhost", "root", "", "bdliga");
+
           require '../Medoo.php';
           use Medoo\Medoo;
 
@@ -62,18 +65,12 @@
               'password' => ''
           ]);
 
-          $resultado = $database->select("resultado","*");
+          $resultado = $database->select("jorn_resul","*");
           $numFilas = count($resultado);
           if ($numFilas == 0) {
             echo '<h2 class="zeroMensaje">No existe ningún resultado<h2>';
             echo '<h3 class="zeroMensaje">Para crearlo, pincha en el icono de abajo a la derecha</h3>';
           } else {
-            $cod1=$database->select("jorn_resul","cod_eq1");
-            $cod2=$database->select("jorn_resul","cod_eq2");
-            $pts1=$database->select("jorn_resul","puntos_eq1");
-            $pts2=$database->select("jorn_resul","puntos_eq2");
-            $jorn=$database->select("jorn_resul","jornada");
-
             echo "<center><h2 class='titulo'><b>RESULTADOS</b></h2></center>";
             echo "<center>";
             echo "<table width='700' border='0'>";

@@ -10,7 +10,7 @@
     <div class="topMenu">
       <i id="menu" class="fas fa-bars" onclick="doOnMenu()" nav-linkdisabled></i>
     </div>
-    <form>
+    <form action="addResultados.php" method="post">
       <div class="">
         <div class="row">
           <label for="codEq">Código del equipo 1:</label>
@@ -47,6 +47,8 @@
 </html>
 
 <?php
+ $conexion = mysqli_connect("localhost", "root", "", "bdliga");
+
  require '../Medoo.php';
  use Medoo\Medoo;
 
@@ -65,31 +67,33 @@
    $pts2=$_POST['ptos2'];
    $jorn=$_POST['jornada'];
 
-
    if (empty($cod1) or empty($cod2) or empty($pts1) or empty($pts2) or empty($jorn)) {
      echo '<p class="error">Error, todos los campos tienen que estar rellenos para crear el resultado</p>';
    } else {
-    /* $existe1=$database->select("equipo","*",["cod_eq[=]" => $cod1]);
+     $existe1=$database->select("equipo","*",["cod_eq[=]" => $cod1]);
      $existe2=$database->select("equipo","*",["cod_eq[=]" => $cod2]);
 
      if ($cod1==$cod2) {
       echo '<p class="error">Los equipos no pueden ser iguales</p>';
+    } elseif (count($existe1)==0 and count($existe2)==0) {
+      echo '<p class="error">No existen ninguno de los dos equipos introducidos</p>';
     } elseif (count($existe1)==0) {
       echo '<p class="error">No existe el equipo 1</p>';
     } elseif (count($existe2)==0) {
-      echo '<p class="error">No existe el equipo 1</p>';
-    } elseif (count($existe1)==0 and count($existe2)==0) {
-      echo '<p class="error">No existen ninguno de los dos equipos introducidos</p>';
-    } else {*/
-      $resultado = $database->insert("jorn_resul", ["cod_eq1" => $cod1,
+      echo '<p class="error">No existe el equipo 2</p>';
+    } else {
+      $jornada=$database->insert("enfrentamiento",["jornada" => $jorn]);
+      /*$resultado = $database->insert("jorn_resul", ["cod_eq1" => $cod1,
                                               "cod_eq2" => $cod2,
                                               "puntos_eq1" => $pts1,
                                               "puntos_eq2" => $pts2,
-                                              "jornada" => $jorn]);
-       header("Location: resultados.php");
+                                              "jornada" => $jorn]);*/
+      $insertar=mysqli_query($conexion, "INSERT INTO jorn_resul VALUES ($cod1,$cod2,$pts1,$pts2,$jorn)");
+
+      header("Location: resultados.php");
     }
 
-//  }
+  }
 
 
  }

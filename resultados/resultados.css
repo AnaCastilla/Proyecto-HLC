@@ -2,18 +2,18 @@
   overflow-x: hidden;
   padding: 0;
   margin: 0;
-  font-family: 'Hind Siliguri', sans-serif;
+
 }
 html {
   background-image: url("../img/loginBackground.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
+  font-family: 'Hind Siliguri', sans-serif;
 }
 .body {
   display: flex;
 }
-
 .titulo {
   font-family: 'Permanent Marker', sans-serif;
   letter-spacing: 0.5rem;
@@ -21,7 +21,41 @@ html {
   font-size: 3rem;
   margin-bottom: 7rem;
 }
-
+.addButton:hover {
+  animation: rotateOpenMenu 1s forwards;
+}
+.zeroMensaje {
+  text-shadow: 0 -1px 0 #fff, 0 1px 0 #2e2e2e, 0 2px 0 #2c2c2c, 0 3px 0 #2a2a2a, 0 4px 0 #282828, 0 5px 0 #262626, 0 6px 0 #242424, 0 7px 0 #222, 0 8px 0 #202020;
+  font-size: 3rem;
+  padding: 1srem;
+}
+.editButton img {
+  display: block;
+  width: 10%;
+  height: 10%;
+}
+.aHome {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+.home:hover {
+  color: #9C8A84;
+}
+.fondo_res {
+  background-color: rgba(255, 255, 255, 0.8);
+  font-weight: bold;
+  color: #4F85B7;
+}
+td, th {
+  padding: 5px;
+  color: black;
+  border-radius: 5px;
+}
+th {
+  color: white;
+}
 .sideMenu {
   display: inline-block;
   height: 100vh;
@@ -37,15 +71,6 @@ html {
 }
 .sideMenu:hover {
   animation: slidein 1s; animation-fill-mode: forwards;
-}
-.aHome {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-decoration: none;
-}
-.home:hover {
-  color: #9C8A84;
 }
 .topMenu {
   position: sticky;
@@ -111,10 +136,19 @@ html {
   max-width: 100%;
 }
 
-.zeroMensaje {
-  text-shadow: 0 -1px 0 #fff, 0 1px 0 #2e2e2e, 0 2px 0 #2c2c2c, 0 3px 0 #2a2a2a, 0 4px 0 #282828, 0 5px 0 #262626, 0 6px 0 #242424, 0 7px 0 #222, 0 8px 0 #202020;
-  font-size: 3rem;
-  padding: 1srem;
+.utils {
+  padding: 1rem;
+}
+.utils img {
+  display: block;
+  max-width: 100%;
+}
+.utils a {
+  margin: 2rem;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 4rem;
 }
 
 /*ANIMACIONES*/

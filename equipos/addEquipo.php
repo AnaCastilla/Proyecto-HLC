@@ -54,8 +54,8 @@ if(isset($_POST['submit'])) {
   $city=$_POST['cityEq'];
   $creacion=$_POST['yearEq'];
 
-  $query = $database->select("equipo","*");
-  $numFilas = count($query);
+  $query=$database->select("equipo","*");
+  $numFilas=count($query);
 
   if (empty($nom) or empty($city) or empty($creacion)) {
     echo '<p class="error">Error, todos los campos tienen que estar rellenos para crear el equipo</p>';

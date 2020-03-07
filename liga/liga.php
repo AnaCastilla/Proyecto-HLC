@@ -73,7 +73,6 @@
           } else {
             $nom = $database->select("liga","nombre_liga");
             $desc = $database->select("liga","desc_liga");
-            $año = $database->select("liga","año_liga");
 
             echo "<center><h2 class='titulo'><b>LIGA</b></h2></center>";
             echo "<center>";
